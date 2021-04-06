@@ -4,7 +4,8 @@ trigger:
 pool:
   vmImage: windows-latest
 
-s- task: Application security testing@2020
+steps:
+- task: Application security testing@2020
   inputs:
     projectName: 'ADO-OSA-CLI-SAST-PLUGIN-Freeport-1-NodeGoat'
     enableProxy: false
