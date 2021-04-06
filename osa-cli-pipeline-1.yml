@@ -1,0 +1,33 @@
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- script: |
+    wget -q https://github.com/checkmarx-ltd/cx-flow/releases/download/$(CX_FLOW_VERSION)/cx-flow-$(CX_FLOW_VERSION).jar
+    wget -q https://download.checkmarx.com/9.0.0/Plugins/CxConsolePlugin-$(CX_CLI_VERSION).zip -O cli.zip
+    unzip -q cli.zip -d cxcli
+    rm -rf cli.zip
+    chmod +x ./cxcli/runCxConsole.sh
+  displayName: 'Setup Environment'
+  
+  
+- script: |
+    npm install
+  displayName: 'Build'
+  
+- script: |
+    ./cxcli/runCxConsole.sh OsaScan -v \
+    -CxServer $(CX_SERVER) \
+    -projectName "$(CX_TEAM)/$(CX_PROJECTNAME)" \
+    -CxUser $(CX_USERNAME) \
+    -CxPassword $(CX_PASSWORD) \
+    -Locationtype folder \
+    -locationpath $(Build.Repository.LocalPath) \
+    -EnableOsa \
+    -executepackagedependency \
+    -OSAJson osa_results
+  displayName: 'CLI OSA'
