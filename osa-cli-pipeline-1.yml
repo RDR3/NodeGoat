@@ -24,7 +24,7 @@ steps:
   
 - script: |
     ./cxcli/runCxConsole.sh OsaScan -v \
-    -CxServer $(CX_SERVER) \
+    -CxServer $(CX_SERVER_LOCAL) \
     -projectName "$(CX_TEAM)/$(CX_PROJECTNAME)" \
     -CxUser $(CX_USERNAME) \
     -CxPassword $(CX_PASSWORD) \
