@@ -1,0 +1,14 @@
+trigger:
+- master
+
+pool:
+  vmImage: windows-latest
+
+s- task: Application security testing@2020
+  inputs:
+    projectName: 'ADO-OSA-CLI-SAST-PLUGIN-Freeport-1-NodeGoat'
+    enableProxy: false
+    enableSastScan: true
+    CheckmarxService: 'Cx Private Cloud 9.3'
+    fullTeamName: 'CxServer/SP/America/NA-RR-PS/RDR3/ADO_CXFLOW_DOCKER'
+    enableDependencyScan: false
