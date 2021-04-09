@@ -10,6 +10,10 @@ steps:
     projectName: 'ADO-OSA-CLI-SAST-PLUGIN-Freeport-1-NodeGoat'
     enableProxy: false
     enableSastScan: true
-    CheckmarxService: 'Cx AWS Localhost 9.3'
+    CheckmarxService: 'Cx Private Cloud 9.3'
     fullTeamName: 'CxServer/SP/America/NA-RR-PS/RDR3/ADO_CXFLOW_DOCKER'
+    vulnerabilityThreshold: true
+    high: '1'
+    medium: '1'
+    low: '1'
     enableDependencyScan: false
