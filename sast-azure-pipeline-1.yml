@@ -14,4 +14,4 @@ steps:
     fullTeamName: 'CxServer/SP/America/NA-RR-PS/RDR3/ADO_CXFLOW_DOCKER'
     enableDependencyScan: true
     dependencyServerURL: 'CxSCA'
-    dependencyTenant: 'SCA-Champions/Champions/PSNA/RR'
+    dependencyTenant: 'SCA-Champions'
