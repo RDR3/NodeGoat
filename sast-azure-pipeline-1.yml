@@ -16,4 +16,6 @@ steps:
     high: '1'
     medium: '1'
     low: '1'
-    enableDependencyScan: false
+    enableDependencyScan: true
+    dependencyServerURL: 'CxSCA'
+    dependencyTenant: 'na-ps-rr-1-ado'
