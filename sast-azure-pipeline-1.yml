@@ -11,7 +11,12 @@ steps:
     enableProxy: false
     enableSastScan: true
     CheckmarxService: 'Cx Private Cloud 9.3'
+    customPreset: 'Custom Example High and Medium'
     fullTeamName: 'CxServer/SP/America/NA-RR-PS/RDR3/ADO_CXFLOW_DOCKER'
+    incScan: false
+    forceScan: true
+    folderExclusion: 'wwwroot\lib, wwwroot\development, cvs, .svn, .hg , .git, .bzr, bin , obj,  backup, .idea, node_modules'
+    fileExtension: '!**/*min.js, !**/*adal.js, !**/*jsoneditor-minimalist.js, !**/*.DS_Store, !**/*.ipr, !**/*.iws, !**/*.bak, !**/*.tmp, !**/*.aac, !**/*.aif, !**/*.iff, !**/*.m3u, !**/*.mid, !**/*.mp3,!**/*.mpa, !**/*.ra, !**/*.wav, !**/*.wma, !**/*.3g2, !**/*.3gp, !**/*.asf, !**/*.asx, !**/*.avi,!**/*.flv, !**/*.mov, !**/*.mp4, !**/*.mpg,  !**/*.rm, !**/*.swf, !**/*.vob, !**/*.wmv, !**/*.bmp, !**/*.gif, !**/*.jpg, !**/*.png, !**/*.psd, !**/*.tif, !**/*.swf, !**/*.jar, !**/*.zip, !**/*.rar, !**/*.exe, !**/*.dll, !**/*.pdb, !**/*.7z, !**/*.gz, !**/*.tar.gz, !**/*.tar, !**/*.gz, !**/*.ahtm, !**/*.ahtml, !**/*.fhtml, !**/*.hdm, !**/*.hdml,   !**/*.hsql, !**/*.ht, !**/*.hta, !**/*.htc, !**/*.htd, !**/*.war, !**/*.ear, !**/*.htmls, !**/*.ihtml, !**/*.mht, !**/*.mhtm, !**/*.mhtml, !**/*.ssi, !**/*.stm, !**/*.stml, !**/*.ttml, !**/*.txn, !**/*.xhtm, !**/*.xhtml, !**/*.class, !**/*.iml'
     enableDependencyScan: true
     dependencyServerURL: 'CxSCA'
     dependencyTenant: 'SCA-Champions'
