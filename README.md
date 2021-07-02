@@ -100,7 +100,6 @@ The default application settings (database url, http port, etc.) can be changed 
 ## Report bugs, Feedback, Comments
 *  Open a new [issue](https://github.com/OWASP/NodeGoat/issues) or contact team by joining chat at [Slack](https://owasp.slack.com/messages/project-nodegoat/) or [![Join the chat at https://gitter.im/OWASP/NodeGoat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/OWASP/NodeGoat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-
 ## Contributing
 
 Please Follow [the contributing guide](CONTRIBUTING.md)
@@ -117,3 +116,5 @@ Here are the amazing [contributors](https://github.com/OWASP/NodeGoat/graphs/con
 
 ## License
 Code licensed under the [Apache License v2.0.](http://www.apache.org/licenses/LICENSE-2.0)
+
+#test
